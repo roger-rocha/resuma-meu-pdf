@@ -74,6 +74,10 @@ ${pdfText}`;
         console.log("Texto extraido:", data.text);
         setPdfText(data.text);
       } else {
+        toast({
+          title: "Erro ao converter seu PDF.",
+          description: "Não foi possível converter seu PDF em texto.",
+        });
         console.error("Falhou ao extrair o texto do PDF.");
       }
     };

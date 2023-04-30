@@ -5,6 +5,14 @@ type PdfParseResponse = {
   text: string;
 };
 
+export const config = {
+    api: {
+      bodyParser: {
+        sizeLimit: '16mb',
+      }
+    }
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
